@@ -37,7 +37,6 @@ userSchema.statics.signup = async function (
   ipAddress
 ) {
   //validation
-
   if (!name || !username || !email || !password || !ipAddress) {
     throw Error("All fields must be filled");
   }
@@ -72,6 +71,7 @@ userSchema.statics.signup = async function (
 
 
 userSchema.statics.login=async function(email,password,ipAddress){
+  
   if ( !email || !password || !ipAddress) {
     throw Error("All fields must be filled");
   }
